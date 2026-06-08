@@ -16,7 +16,25 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/employee/assets/index-D4dUNOZJ.js"></script>
+    <script type="text/javascript">
+      (function (location) {
+        if (location.search[1] === "/") {
+          var decoded = location.search
+            .slice(1)
+            .split("&")
+            .map(function (segment) {
+              return segment.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(
+            null,
+            null,
+            location.pathname.slice(0, -1) + decoded + location.hash
+          );
+        }
+      })(window.location);
+    </script>
+    <script type="module" crossorigin src="/employee/assets/index-CXwQBvYb.js"></script>
     <link rel="stylesheet" crossorigin href="/employee/assets/index-Dg13ScWs.css">
   </head>
   <body>
